@@ -1,0 +1,37 @@
+conky.config = {
+    gap_x = 270,
+    gap_y = 570,
+    font = 'Helvetica:size=15',
+    update_interval = 1.0,
+    maximum_width = 1000,
+    background = false,
+    use_xft = true,
+    xftalpha = 0.9,
+    total_run_times = 0,
+    own_window = true,
+    own_window_type = 'override',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = true,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    default_color = '808080',
+    default_shade_color = '101319',
+    default_outline_color = 'green',
+    alignment = 'top_left',
+    no_buffers = true,
+    uppercase = false,
+    cpu_avg_samples = 2,
+    override_utf8_locale = false,
+}
+
+conky.text = [[
+${color ce2c51}System  ${color ffffff}${goto 130}${nodename}             ${goto 300}${kernel}
+${color ce2c51}CPU     ${color ffffff}${goto 130}$freq MHz               ${goto 300}${hwmon 0 temp 1} C ${goto 380}${cpu cpu1}% ${goto 460}${cpu cpu2}%
+${if_existing /sys/class/power_supply/BAT1/uevent}${color ce2c51}Battery ${color ffffff}${goto 130}${battery_short BAT1}${endif}
+${color ce2c51}eth0    ${color ffffff}${goto 130}${addr eth0}            ${goto 300}U/D ${goto 380}${upspeedf eth0} ${goto 460}${downspeedf eth0} ${goto 540}KB/s
+${color ce2c51}wlan0   ${color ffffff}${goto 130}${addr wlan0}           ${goto 300}U/D ${goto 380}${upspeedf wlan0} ${goto 460}${downspeedf wlan0} ${goto 540}KB/s
+${color ce2c51}        ${color ffffff}${goto 130}${wireless_essid wlan0} ${goto 300}${wireless_link_qual_perc wlan0}%
+]]
