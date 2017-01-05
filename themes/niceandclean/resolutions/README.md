@@ -10,6 +10,6 @@ $ ln -s 1366x768 default
 
 ## Notes
 
-Only the 1366x768 is actually complete.
-The other resolutions might need adjustments
+Only the 1366x768 and 1024x600 resolutions are actually complete.
+Other resolutions might need adjustments
 for the position of the conky widgets.
