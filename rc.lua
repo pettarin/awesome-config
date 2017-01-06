@@ -628,8 +628,8 @@ end
 -- ALPE run Network Manager applet for WiFi connections
 run_once("nm-applet &")
 
--- ALPE already started by niceandclean/theme.lua
--- run_once("sh .config/awesome/themes/niceandclean/niceandclean.sh &")
+-- ALPE apparently, this needs to be done here as well (theme.lua does not work?)
+run_once("sh .config/awesome/themes/niceandclean/niceandclean.sh &")
 
 -- ALPE prevent Dropbox from autostarting
 -- run_once("dropbox start &")
