@@ -2,8 +2,8 @@
 
 My configuration file and theme for the [awesome desktop manager](https://awesomewm.org/)
 
-* Version: 1.1.7
-* Date: 2017-01-05
+* Version: 1.1.8
+* Date: 2017-01-06
 * Developer: [Alberto Pettarin](http://www.albertopettarin.it/)
 * License: the MIT License (MIT)
 * Contact: [click here](http://www.albertopettarin.it/contact.html)
@@ -16,9 +16,25 @@ My configuration file and theme for the [awesome desktop manager](https://awesom
 
 ## Installation
 
-1. Clone this repository and put/symlink its contents into ``~/.config/awesome``.
-2. Navigate to ``~/.config/awesome/themes/niceandclean/resolutions`` and symlink the correct resolution to ``default``
-2. Hit ``Mod4 + Shift + r`` to reload.
+1. Clone this repository and put/symlink its contents into ``~/.config/awesome``:
+
+    ```bash
+    $ cd /path/to/a/storage/directory/of/your/choice
+    $ git clone https://github.com/pettarin/awesome-config
+    $ mv ~/.config/awesome ~/.config/awesome.backup
+    $ ln -s awesome-config ~/.config/awesome
+    ```
+
+2. Navigate to ``~/.config/awesome/themes/niceandclean/resolutions``
+   and symlink the correct resolution to ``default``:
+
+    ```bash
+    $ cd ~/.config/awesome/themes/niceandclean/resolutions
+    $ rm default
+    $ ln -s 1366x768 default
+    ```
+
+3. Hit ``Mod4 + Shift + r`` to reload.
 
 
 ## Configuration

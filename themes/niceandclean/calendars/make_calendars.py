@@ -12,7 +12,7 @@ __email__ = "alberto@albertopettarin.it"
 __copyright__ = "Copyright 2015-2017, Alberto Pettarin (www.albertopettarin.it)"
 __license__ = "MIT"
 __status__ = "Production"
-__version__ = "1.1.7"
+__version__ = "1.1.8"
 
 
 def usage():

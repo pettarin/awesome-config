@@ -1,8 +1,8 @@
 -- niceandclean, awesome3 theme, by Blazeix, based off of ghost1227's openbox theme.
 
 -- Modified by Alberto Pettarin
--- Version: 1.1.7
--- Date: 2017-01-05
+-- Version: 1.1.8
+-- Date: 2017-01-06
 
 --{{{ Main
 local awful = require("awful")
