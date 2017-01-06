@@ -20,7 +20,7 @@ My configuration file and theme for the [awesome desktop manager](https://awesom
 
     ```bash
     $ cd /path/to/a/storage/directory/of/your/choice
-    $ git clone https://github.com/pettarin/awesome-config
+    $ git clone https://github.com/pettarin/awesome-config --recursive
     $ mv ~/.config/awesome ~/.config/awesome.backup
     $ ln -s awesome-config ~/.config/awesome
     ```
