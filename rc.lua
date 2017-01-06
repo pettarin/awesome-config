@@ -1,5 +1,5 @@
 -- Modified by Alberto Pettarin
--- Version: 1.1.8
+-- Version: 1.1.9
 -- Date: 2017-01-06
 
 -- ALPE API docs https://awesome.naquadah.org/doc/api/
@@ -491,6 +491,15 @@ awful.rules.rules = {
         },
         properties = {
             tag = tags[1][2]
+        }
+    },
+    {
+        -- Google Chrome always on desktop #3
+        rule = {
+            class = "Google-chrome"
+        },
+        properties = {
+            tag = tags[1][3]
         }
     },
     {

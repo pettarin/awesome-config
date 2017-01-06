@@ -1,7 +1,7 @@
 -- niceandclean, awesome3 theme, by Blazeix, based off of ghost1227's openbox theme.
 
 -- Modified by Alberto Pettarin
--- Version: 1.1.8
+-- Version: 1.1.9
 -- Date: 2017-01-06
 
 --{{{ Main
