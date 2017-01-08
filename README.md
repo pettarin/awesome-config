@@ -2,8 +2,7 @@
 
 My configuration file and theme for the [awesome desktop manager](https://awesomewm.org/)
 
-* Version: 1.1.9
-* Date: 2017-01-06
+* Date: 2017-01-08
 * Developer: [Alberto Pettarin](http://www.albertopettarin.it/)
 * License: the MIT License (MIT)
 * Contact: [click here](http://www.albertopettarin.it/contact.html)

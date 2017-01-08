@@ -1,6 +1,5 @@
 -- Modified by Alberto Pettarin
--- Version: 1.1.9
--- Date: 2017-01-06
+-- Date: 2017-01-08
 
 -- ALPE API docs https://awesome.naquadah.org/doc/api/
 -- ALPE see also https://awesome.naquadah.org/wiki/FAQ
