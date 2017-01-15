@@ -70,7 +70,7 @@ beautiful.init(".config/awesome/themes/niceandclean/theme.lua")
 revelation.init()
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
+terminal = "lxterminal"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -122,6 +122,7 @@ end
 mymainmenu = awful.menu({
     items = {
         { "&xterm",          "xterm" },
+        { "&lxterminal",     "lxterminal" },
         { "&gnome-terminal", "gnome-terminal" },
         { "pc&manfm",        "pcmanfm" },
         { " --------- ",     "" },

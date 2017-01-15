@@ -1,9 +1,9 @@
 conky.config = {
-    gap_x = 205,
+    gap_x = 360,
     gap_y = 200,
-    font = 'Helvetica:size=90',
+    font = 'Helvetica:size=120',
     update_interval = 30.0,
-    maximum_width = 140,
+    maximum_width = 200,
     background = false,
     use_xft = true,
     xftalpha = 0.9,
