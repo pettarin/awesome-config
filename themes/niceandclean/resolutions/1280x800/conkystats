@@ -30,7 +30,7 @@ conky.config = {
 conky.text = [[
 ${color ce2c51}System  ${color ffffff}${goto 130}${nodename}             ${goto 300}${kernel}
 ${color ce2c51}CPU     ${color ffffff}${goto 130}$freq MHz               ${goto 300}${hwmon 0 temp 1} C ${goto 380}${cpu cpu1}% ${goto 460}${cpu cpu2}%
-${if_existing /sys/class/power_supply/BAT1/uevent}${color ce2c51}Battery ${color ffffff}${goto 130}${battery_short BAT1}${endif}
+${if_existing /sys/class/power_supply/BAT1/uevent}${color ce2c51}Battery ${color ffffff}${goto 130}${battery_short BAT1}${else}${color ce2c51}No Battery ${endif}
 ${color ce2c51}eth0    ${color ffffff}${goto 130}${addr eth0}            ${goto 300}U/D ${goto 380}${upspeedf eth0} ${goto 460}${downspeedf eth0} ${goto 540}KB/s
 ${color ce2c51}wlan0   ${color ffffff}${goto 130}${addr wlan0}           ${goto 300}U/D ${goto 380}${upspeedf wlan0} ${goto 460}${downspeedf wlan0} ${goto 540}KB/s
 ${color ce2c51}        ${color ffffff}${goto 130}${wireless_essid wlan0} ${goto 300}${wireless_link_qual_perc wlan0}%

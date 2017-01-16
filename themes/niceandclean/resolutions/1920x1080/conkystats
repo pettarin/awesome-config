@@ -30,7 +30,7 @@ conky.config = {
 conky.text = [[
 ${color ce2c51}System  ${color ffffff}${goto 200}${nodename}              ${goto 450}${kernel}
 ${color ce2c51}CPU     ${color ffffff}${goto 200}$freq MHz                ${goto 450}${hwmon 0 temp 1} C ${goto 600}${cpu cpu1}% ${goto 700}${cpu cpu2}% ${goto 800}${cpu cpu3}% ${goto 900}${cpu cpu4}%
-${if_existing /sys/class/power_supply/BAT1/uevent}${color ce2c51}Battery  ${color ffffff}${goto 200}${battery_short BAT1}${endif}
+${if_existing /sys/class/power_supply/BAT1/uevent}${color ce2c51}Battery  ${color ffffff}${goto 200}${battery_short BAT1}${else}${color ce2c51}No battery${endif}
 ${color ce2c51}eth     ${color ffffff}${goto 200}${addr enp0s31f6}        ${goto 450}U/D ${goto 600}${upspeedf enp0s31f6} ${goto 700}${downspeedf enp0s31f} ${goto 800}KB/s
 ${color ce2c51}wlan    ${color ffffff}${goto 200}${addr wlp4s0}           ${goto 450}U/D ${goto 600}${upspeedf wlp4s0} ${goto 700}${downspeedf wlp4s0} ${goto 800}KB/s
 ${color ce2c51}        ${color ffffff}${goto 200}${wireless_essid wlp4s0} ${goto 450}${wireless_link_qual_perc wlp4s0}%
