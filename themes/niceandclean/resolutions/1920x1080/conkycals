@@ -1,7 +1,7 @@
 conky.config = {
     gap_x = 1550,
-    gap_y = 220,
-    font = 'Courier:size=20:bold',
+    gap_y = 150,
+    font = 'Courier:size=16:bold',
     update_interval = 10000,
     maximum_width = 600,
     background = false,
