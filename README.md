@@ -2,7 +2,7 @@
 
 My configuration file and theme for the [awesome desktop manager](https://awesomewm.org/)
 
-* Date: 2017-01-17
+* Date: 2017-04-19
 * Developer: [Alberto Pettarin](http://www.albertopettarin.it/)
 * License: the MIT License (MIT)
 * Contact: [click here](http://www.albertopettarin.it/contact.html)
@@ -30,7 +30,7 @@ My configuration file and theme for the [awesome desktop manager](https://awesom
     ```bash
     $ cd ~/.config/awesome/themes/niceandclean/resolutions
     $ rm default
-    $ ln -s 1366x768 default
+    $ ln -s 1920x1080 default
     ```
 
 3. Hit ``Mod4 + Shift + r`` to reload.

@@ -127,7 +127,7 @@ mymainmenu = awful.menu({
         { "&lxterminal",     "lxterminal" },
         { "&xterm",          "xterm" },
         { " --------- ",     "" },
-        { "ice&dove",        "icedove" },
+        { "thun&derbird",    "thunderbird" },
         { " --------- ",     "" },
         { "&iceweasel",      "iceweasel" },
         { "&chrome",         "google-chrome" },
@@ -478,9 +478,9 @@ awful.rules.rules = {
         }
     },
     {
-        -- Icedove (Thunderbird) always on desktop #1
+        -- Thunderbird always on desktop #1
         rule = {
-            class = "Icedove"
+            class = "Thunderbird"
         },
         properties = {
             tag = tags[1][1]
