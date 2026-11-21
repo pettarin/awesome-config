@@ -70,7 +70,7 @@ beautiful.init(".config/awesome/themes/niceandclean/theme.lua")
 revelation.init()
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
+terminal = "lxterminal"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -112,7 +112,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has the eight tags.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8 }, s, awful.layout.suit.max)
+    tags[s] = awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8" }, s, awful.layout.suit.max)
 end
 -- }}}
 
@@ -123,17 +123,21 @@ mymainmenu = awful.menu({
     items = {
         { "pc&manfm",        "pcmanfm" },
         { " --------- ",     "" },
-        { "&lxterminal",     "lxterminal" },
         { "&gnome-terminal", "gnome-terminal" },
+        { "&lxterminal",     "lxterminal" },
         { "&xterm",          "xterm" },
         { " --------- ",     "" },
-        { "ice&dove",        "icedove" },
+        { "thun&derbird",    "thunderbird" },
         { " --------- ",     "" },
         { "&iceweasel",      "iceweasel" },
         { "&chrome",         "google-chrome" },
         { " --------- ",     "" },
         { "&skype",          "skypeforlinux" },
         { "d&ropbox",        "dropbox start" },
+        { "inksca&pe",       "inkscape" },
+        { " --------- ",     "" },
+        { "&vlc",            "vlc" },
+        { "&kill vlc",       "killall vlc" },
         { " --------- ",     "" },
         { "synergy server",  ".bin/startSynergyServer" },
         { "synergy client",  ".bin/startSynergyClient" },
@@ -141,7 +145,7 @@ mymainmenu = awful.menu({
         { "set cpu &freq",   "sudo /usr/sbin/setcpufreq" },
         { "s&uspend",        "sudo /usr/sbin/pm-suspend" },
         { " --------- ",     "" },
-        { "&quit",           awesome.quit }
+        { "&quit",           function() awesome.quit() end }
     }
 })
 
@@ -315,16 +319,18 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "Down",    function () awful.client.swap.byidx(-1) end),
 
     -- ALPE advancedOSD bindings
-    awful.key({ "Control",        }, "Escape",  function () awful.util.spawn(".bin/advancedOSD toggleVolume")   end),
-    awful.key({ "Control",        }, "F1",      function () awful.util.spawn(".bin/advancedOSD lowerVolume")    end),
-    awful.key({ "Control",        }, "F2",      function () awful.util.spawn(".bin/advancedOSD raiseVolume")    end),
-    awful.key({ "Control",        }, "F3",      function () awful.util.spawn(".bin/advancedOSD toggleCapture")  end),
-    awful.key({ "Control",        }, "F5",      function () awful.util.spawn(".bin/advancedOSD toggleRadio")    end),
-    awful.key({ "Control",        }, "F6",      function () awful.util.spawn(".bin/advancedOSD webcam")         end),
-    awful.key({ "Control",        }, "F7",      function () awful.util.spawn("lxrandr")                         end),
-    awful.key({ "Control",        }, "F8",      function () awful.util.spawn(".bin/advancedOSD toggleTouchpad") end),
-    awful.key({ "Control",        }, "Insert",  function () awful.util.spawn(".bin/advancedOSD screenshot")     end),
-    awful.key({ modkey, "Mod1"    }, "",        function () awful.util.spawn(".bin/advancedOSD time")           end),
+    awful.key({ "Control",        }, "F1",      function () awful.util.spawn(".bin/advancedOSD toggleVolume")    end),
+    awful.key({ "Control",        }, "F2",      function () awful.util.spawn(".bin/advancedOSD lowerVolume")     end),
+    awful.key({ "Control",        }, "F3",      function () awful.util.spawn(".bin/advancedOSD raiseVolume")     end),
+    awful.key({ "Control",        }, "F4",      function () awful.util.spawn(".bin/advancedOSD toggleCapture")   end),
+    awful.key({ "Control",        }, "F5",      function () awful.util.spawn(".bin/advancedOSD lowerBrightness") end),
+    awful.key({ "Control",        }, "F6",      function () awful.util.spawn(".bin/advancedOSD raiseBrightness") end),
+    awful.key({ "Control",        }, "F7",      function () awful.util.spawn("lxrandr")                          end),
+    awful.key({ "Control",        }, "F8",      function () awful.util.spawn(".bin/advancedOSD toggleRadio")     end),
+    awful.key({ "Control",        }, "F9",      function () awful.util.spawn(".bin/advancedOSD toggleTouchpad")  end),
+    awful.key({ "Control",        }, "F10",     function () awful.util.spawn(".bin/advancedOSD screenshot")      end),
+    awful.key({ "Control",        }, "Print",   function () awful.util.spawn(".bin/advancedOSD screenshot")      end),
+    awful.key({ modkey, "Mod1"    }, "",        function () awful.util.spawn(".bin/advancedOSD time")            end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j",       function () awful.client.swap.byidx( 1)     end),
@@ -476,9 +482,9 @@ awful.rules.rules = {
         }
     },
     {
-        -- Icedove (Thunderbird) always on desktop #1
+        -- Thunderbird always on desktop #1
         rule = {
-            class = "Icedove"
+            class = "Thunderbird"
         },
         properties = {
             tag = tags[1][1]

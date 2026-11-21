@@ -145,7 +145,7 @@ mymainmenu = awful.menu({
         { "set cpu &freq",   "sudo /usr/sbin/setcpufreq" },
         { "s&uspend",        "sudo /usr/sbin/pm-suspend" },
         { " --------- ",     "" },
-        { "&quit",           awesome.quit }
+        { "&quit",           function() awesome.quit() end }
     }
 })
 
