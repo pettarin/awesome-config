@@ -1,9 +1,9 @@
 -- Modified by Alberto Pettarin
--- Date: 2017-01-16
+-- Date: 2026-11-21
 
--- ALPE API docs https://awesome.naquadah.org/doc/api/
--- ALPE see also https://awesome.naquadah.org/wiki/FAQ
--- ALPE see also https://wiki.archlinux.org/index.php/Awesome
+-- ALPE awesome WM API docs (stable): https://awesomewm.org/doc/api/
+-- ALPE awesome WM recipes: https://awesomewm.org/recipes/
+-- ALPE see also https://wiki.archlinux.org/title/Awesome
 
 -- Standard awesome library
 local gears = require("gears")
@@ -621,7 +621,8 @@ client.connect_signal("unfocus",
 -- Icons {{{
 
 -- ALPE Remove annoying clock/busy icon
--- ALPE see https://awesome.naquadah.org/wiki/Disable_startup-notification_globally
+-- ALPE see https://awesomewm.org/doc/api/documentation/90-FAQ.md.html
+-- ALPE originally it was https://awesome.naquadah.org/wiki/Disable_startup-notification_globally
 local oldspawn = awful.util.spawn
 awful.util.spawn = function(s)
     oldspawn(s, false)
@@ -632,7 +633,7 @@ end
 -- Autostart {{{
 
 -- ALPE Function to autostart programs (only once)
--- ALPE see http://awesome.naquadah.org/wiki/Autostart
+-- ALPE see https://awesomewm.org/doc/api/documentation/90-FAQ.md.html
 function run_once(cmd)
     findme = cmd
     firstspace = cmd:find(" ")
@@ -647,8 +648,5 @@ run_once("nm-applet &")
 
 -- ALPE apparently, this needs to be done here as well (theme.lua does not work?)
 run_once("sh .config/awesome/themes/niceandclean/niceandclean.sh &")
-
--- ALPE prevent Dropbox from autostarting
--- run_once("dropbox start &")
 
 -- }}}

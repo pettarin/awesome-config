@@ -2,7 +2,7 @@
 
 My configuration file and theme for the [awesome desktop manager](https://awesomewm.org/)
 
-* Date: 2017-04-19
+* Date: 2026-11-21
 * Developer: [Alberto Pettarin](http://www.albertopettarin.it/)
 * License: the MIT License (MIT)
 * Contact: [click here](http://www.albertopettarin.it/contact.html)
@@ -93,6 +93,10 @@ with the programs you use most frequently.
 
 ## Acknowledgements
 
+Many thanks to all the contributors of the
+[awesome windows manager](https://awesomewm.org/)
+project, of course.
+
 The theme is a customized version of ``niceandclean`` by ``Blazeix``,
 based off of ``ghost1227``'s openbox theme
 ([original code](https://github.com/waf/nice-and-clean-theme)).
@@ -104,6 +108,4 @@ The ``revelation`` plugin has been created by ``guotsuan``
 ## License
 
 **awesome-config** is released under the MIT License.
-
-
 
